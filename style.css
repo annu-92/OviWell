@@ -320,7 +320,7 @@ header {
     background: -webkit-linear-gradient(right,#d92f73,#c2185b,#c51059
     , #bf2e68);
     border-radius: 15px;
-    transition: all 0.4s ease;;
+    transition: all 0.2s ease;;
   }
   form .btn:hover .btn-layer{
     left: 0;
@@ -342,8 +342,11 @@ header {
   }
 
 /* PCOS Prediction Form Styles */
+h1,p{
+  display: contents;
+}
 .prediction-form {
-    max-width: 600px;
+    max-width: 700px;
     margin: 2rem auto;
     padding: 2rem;
     background-color: #fff;
@@ -372,7 +375,7 @@ header {
 }
 
 .submit-button {
-    background-color: #4CAF50;
+    background-color: #c2185b;
     color: white;
     padding: 1rem 2rem;
     border: none;
@@ -384,7 +387,7 @@ header {
 }
 
 .submit-button:hover {
-    background-color: #45a049;
+    background-color: #c2185b;
 }
 
 .result-container {
@@ -405,11 +408,11 @@ header {
 }
 
 .success {
-    color: #28a745;
+    color: #df226e;
 }
 
 .warning {
-    color: #dc3545;
+    color: #df226e;
 }
 
 .disclaimer {

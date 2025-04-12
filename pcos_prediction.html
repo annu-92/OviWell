@@ -21,11 +21,13 @@
     </header>
 
     <div class="container">
-        <h1>PCOS Prediction Tool</h1>
-        <p class="description">
-            This tool helps assess your likelihood of having Polycystic Ovarian Syndrome (PCOS).
-            Please answer the following questions to get your prediction.
+        <h1 style="color: #d42d72; font-size: 36px; font-weight: bold;">PCOS Prediction Tool<br></h1>
+        <p style="font-size: 18px; color: #c2185b;">
+        This tool helps assess your likelihood of having Polycystic Ovarian Syndrome (PCOS).
+        Please answer the following questions to get your prediction.
         </p>
+    </div>
+
 
         <div class="prediction-form">
             <form id="pcosForm">
@@ -89,15 +91,13 @@
         document.getElementById('pcosForm').addEventListener('submit', function(e) {
             e.preventDefault();
             
-            // Get form values
+            
             const weight_gain = document.getElementById('weight_gain').value;
             const periods = document.getElementById('periods').value;
             const hair_growth = document.getElementById('hair_growth').value;
             const darkskin = document.getElementById('darkskin').value;
             const fast_food = document.getElementById('fast_food').value;
 
-            // Make prediction (this would normally be sent to a backend server)
-            // For now, we'll use a simple mock prediction
             const result = predictPCOS(weight_gain, hair_growth, darkskin, fast_food);
             
             // Display result
@@ -121,7 +121,7 @@
             return score >= 2 ? 1 : 0;
         }
     </script>
-    <script src="https://cdn.botpress.cloud/webchat/v2.3/inject.js"></script>
-    <script src="https://files.bpcontent.cloud/2025/04/12/11/20250412113101-9KDHYXCQ.js"></script>
+<script src="https://cdn.botpress.cloud/webchat/v2.3/inject.js"></script>
+<script src="https://files.bpcontent.cloud/2025/04/12/11/20250412113101-9KDHYXCQ.js"></script>
 </body>
 </html> 

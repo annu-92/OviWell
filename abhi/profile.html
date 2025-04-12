@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>User Profile</title>
+  <style>
+    body {
+      font-family: sans-serif;
+      background: #f0f0f0;
+      text-align: center;
+      padding-top: 50px;
+    }
+    .profile-box {
+      background: #fff;
+      margin: auto;
+      padding: 30px;
+      border-radius: 8px;
+      width: 300px;
+      box-shadow: 0 0 10px rgba(0,0,0,0.1);
+    }
+    h2 {
+      color: #333;
+    }
+    p {
+      color: #666;
+    }
+    button {
+      margin-top: 20px;
+      padding: 10px 20px;
+      background: #007BFF;
+      color: #fff;
+      border: none;
+      border-radius: 5px;
+      cursor: pointer;
+    }
+    button:hover {
+      background: #0056b3;
+    }
+  </style>
+</head>
+<body>
+  <div class="profile-box">
+    <h2>Welcome, <span id="profile-name"></span>!</h2>
+    <p><strong>Email:</strong> <span id="profile-email"></span></p>
+    <button onclick="logout()">Logout</button>
+  </div>
+
+  <script>
+    const name = localStorage.getItem("userName");
+    const email = localStorage.getItem("userEmail");
+
+    if (!name || !email) {
+      alert("Please login first.");
+      window.location.href = "login.html";
+    } else {
+      document.getElementById("profile-name").textContent = name;
+      document.getElementById("profile-email").textContent = email;
+    }
+
+    function logout() {
+      alert("You have been logged out.");
+      window.location.href = "login.html";
+    }
+  </script>
+</body>
+</html>

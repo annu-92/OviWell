@@ -6,7 +6,7 @@ body{
   height: 100%;
   text-align: center;
   padding-top: 70px;
-  }
+} 
 
 h1 {
   color: #d63384;
@@ -21,6 +21,7 @@ p.description {
   margin: 0 auto 30px;
 }
 /*nav section*/
+
 header {
   background-color: #c2185b;
   width: 100%;
@@ -48,6 +49,25 @@ header {
     margin: 0;
     padding: 0;
     margin-left: auto;
+}
+
+.logo-container {
+  display: flex;
+  align-items: center;
+}
+
+.logo {
+  height: 40px;
+  width: 40px;
+  margin-right: 10px;
+  border-radius: 50%;
+  object-fit: cover;
+}
+
+.brand-name {
+  font-size: 1.4rem;
+  font-weight: bold;
+  color: white;
 }
 
 .nav li {
@@ -128,6 +148,7 @@ header {
   margin-right: 0;
 }
 
+
 .left-section {
   background-image: url(pcos.jpg);
   background-size: cover; 
@@ -136,6 +157,7 @@ header {
   position: relative; 
   flex: 1;
   z-index: 1; 
+  overflow: hidden;
 }
 
 .left-section::after {
@@ -154,6 +176,7 @@ header {
   justify-content: center;
   height: 90vh;
   padding-right:0;
+ 
 }
 .login-box {
   display: flex;
@@ -419,4 +442,65 @@ h1,p{
     font-size: 0.9rem;
     color: #6c757d;
     font-style: italic;
+}
+
+.about-listing {
+  display: flex;
+  justify-content: space-around;
+  flex-wrap: wrap;
+  background-color: #fce2eb;
+  width: 100%; 
+  height: 60vh; 
+  margin: 0; 
+  padding: 0;
+}
+
+.container h2 {
+  text-align: justify;
+  top: 20 px;
+  font-size:1px ;
+}
+
+.container p {
+  text-align: justify;
+  font-size: small;
+}
+
+.about-card {
+  background-color: #fff;
+  border: 1px solid #c68e75;
+  border-radius: 5px;
+  width: 250px;
+  height: 70vh;
+  margin-top: 20px;
+  text-align: center;
+  padding: 20px;
+}
+
+.modal {
+  position: fixed;
+  z-index: 9999;
+  top: 0; left: 0;
+  width: 100%; height: 100%;
+  background-color: rgba(0,0,0,0.5);
+  display: flex; align-items: center; justify-content: center;
+}
+.modal-content {
+  background: #f0b2cb;
+  padding: 30px;
+  border-radius: 10px;
+  text-align: center;
+  box-shadow: 0 0 10px rgba(0,0,0,0.2);
+}
+.modal-content button {
+  background-color: #c2185b;
+  color: white;
+  padding: 10px 20px;
+  border: none;
+  margin-top: 20px;
+  border-radius: 5px;
+  cursor: pointer;
+}
+.modal-content button:hover {
+  background-color: #c2185b;
 }

@@ -4,26 +4,30 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <link rel="stylesheet" href="style.css">
-  <title>OviWell Features</title>
+  <title>OviWell</title>
   
 </head>
 <body>
     <header>
         <nav>
             <div class="container">
+              <div class="logo-container">
+                <img src="logo.jpg" alt="OviWell Logo" class="logo">
+                <span class="brand-name">OviWell</span>
+              </div>
                 <ul class="nav">
                         <li><a href="index.html">Home</a></li>
-                        <li><a href="features.html">Facts</a></li>
-                        <li><a href="about.html" id="aboutLink">About Us</a></li>
-                        <li><a href="login.html" id="loginLink">Login</a></li>
+                        <li><a href="facts.html">Facts</a></li>
+                        <li><a href="about.html">About Us</a></li>
+                        <li><a href="login.html">Login</a></li>
                 </ul> 
             </div>
         </nav>
     </header>
-  <h1>Welcome to OviWell</h1>
+  <h1>Welcome to OviWell</h1><br>
   <p class="description">
     Your AI-powered personalized reproductive healthcare.
-  </p>
+  </p><br><br>
   <div class="features-container" id="features">
     <div class="feature-box">
       <a href="pcos_prediction.html">
@@ -58,6 +62,30 @@
   </div>
 
   <button class="explore-button" onclick="document.getElementById('features').scrollIntoView({behavior: 'smooth'})">Explore More</button>
+  <div id="loginModal" class="modal" style="display:none;">
+    <div class="modal-content">
+      <h2>Welcome to OviWell!</h2>
+      <p>You are now logged in, </p>
+      <p><span id="modal-name"></span></p><br>
+      <button onclick="closeModal()">OK</button>
+    </div>
+  </div>  
+  <script>
+    function closeModal() {
+      document.getElementById("loginModal").style.display = "none";
+    }
+  
+    window.onload = function () {
+      if (localStorage.getItem("loginSuccess") === "true") {
+        document.getElementById("loginModal").style.display = "flex";
+        document.getElementById("modal-name").textContent = localStorage.getItem("userName");
+        document.getElementById("modal-email").textContent = localStorage.getItem("userEmail");
+        localStorage.removeItem("loginSuccess");
+      }
+    };
+  </script>
+  
+   
 <script src="https://cdn.botpress.cloud/webchat/v2.3/inject.js"></script>
 <script src="https://files.bpcontent.cloud/2025/04/12/11/20250412113101-9KDHYXCQ.js"></script>
 </body>

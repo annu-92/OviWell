@@ -150,7 +150,7 @@ header {
 
 
 .left-section {
-  background-image: url(pcos.jpg);
+  background-image: url(img/pcos.jpg);
   background-size: cover; 
   background-position: center; 
   height: 90vh; 
@@ -471,36 +471,165 @@ h1,p{
   border: 1px solid #c68e75;
   border-radius: 5px;
   width: 250px;
-  height: 70vh;
-  margin-top: 20px;
-  text-align: center;
-  padding: 20px;
+  height: 60vh;
+  margin-top: 70px;
+  margin-left: 25px;
+  text-align: justify;
+  padding: 10px;
 }
 
 .modal {
+  display: none;
   position: fixed;
-  z-index: 9999;
-  top: 0; left: 0;
-  width: 100%; height: 100%;
-  background-color: rgba(0,0,0,0.5);
-  display: flex; align-items: center; justify-content: center;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.5);
+  justify-content: center;
+  align-items: center;
+  z-index: 1000;
 }
+
 .modal-content {
-  background: #f0b2cb;
+  background-color: #fff;
   padding: 30px;
-  border-radius: 10px;
-  text-align: center;
-  box-shadow: 0 0 10px rgba(0,0,0,0.2);
+  border-radius: 15px;
+  max-width: 500px;
+  width: 90%;
+  position: relative;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.2);
 }
-.modal-content button {
+
+.modal-content h3 {
+  color: #c2185b;
+  margin-bottom: 20px;
+  font-size: 1.5rem;
+}
+
+.modal-content p {
+  color: #666;
+  line-height: 1.6;
+  margin-bottom: 15px;
+  text-align: justify;
+}
+
+.modal-content ul {
+  list-style-type: disc;
+  padding-left: 20px;
+  margin-bottom: 15px;
+  color: #666;
+  text-align: justify;
+}
+
+.modal-content li {
+  margin-bottom: 8px;
+  line-height: 1.4;
+  text-align: justify;
+}
+
+.close-modal {
   background-color: #c2185b;
   color: white;
-  padding: 10px 20px;
   border: none;
-  margin-top: 20px;
-  border-radius: 5px;
+  padding: 10px 25px;
+  border-radius: 25px;
   cursor: pointer;
+  font-size: 1rem;
+  margin-top: 20px;
+  transition: background-color 0.3s ease;
 }
-.modal-content button:hover {
-  background-color: #c2185b;
+
+.close-modal:hover {
+  background-color: #d63384;
 }
+
+.myths-facts-section {
+  padding: 40px 20px;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.myths-facts-section h2 {
+  color: #c2185b;
+  font-size: 2.5rem;
+  margin-bottom: 40px;
+  text-align: center;
+}
+
+.myths-facts-container {
+  display: flex;
+  flex-wrap: nowrap;
+  justify-content: center;
+  gap: 30px;
+  padding: 20px;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.myth-card {
+  background: #ffffff;
+  border-radius: 15px;
+  padding: 25px;
+  width: calc(33.33% - 20px);
+  min-width: 300px;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+  text-align: center;
+  transition: all 0.3s ease;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  border: 1px solid #f0b2cb;
+}
+
+.myth-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 6px 20px rgba(0, 0, 0, 0.15);
+}
+
+.myth-card img {
+  width: 100%;
+  height: 180px;
+  object-fit: cover;
+  border-radius: 10px;
+  margin-bottom: 25px;
+  border: 1px solid #f0b2cb;
+}
+
+.myth-card h3 {
+  color: #c2185b;
+  font-size: 1.3rem;
+  margin-bottom: 15px;
+  font-weight: 600;
+  line-height: 1.4;
+}
+
+.myth-card p {
+  color: #666;
+  font-size: 1rem;
+  line-height: 1.6;
+  margin: 0;
+  padding: 0 10px;
+  text-align: justify;
+}
+
+.myth-card p strong {
+  color: #d63384;
+  font-weight: 600;
+  display: block;
+  margin-bottom: 8px;
+}
+
+.know-more {
+  color: #c2185b;
+  text-decoration: none;
+  font-weight: 500;
+  margin-left: 5px;
+  transition: color 0.3s ease;
+}
+
+.know-more:hover {
+  color: #d63384;
+  text-decoration: underline;
+}
+

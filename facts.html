@@ -10,7 +10,7 @@
         <nav>
             <div class="container">
               <div class="logo-container">
-                <img src="logo.jpg" alt="OviWell Logo" class="logo">
+                <img src="img/logo.jpg" alt="OviWell Logo" class="logo">
                 <span class="brand-name">OviWell</span>
               </div>
                 <ul class="nav">
@@ -28,25 +28,101 @@
     <h2>Myths & Facts</h2>
     <div class="myths-facts-container">
 
-      <div class="myth-fact-card">
-        <img src="myth1.png" alt="Myth 1">
+      <div class="myth-card">
+        <img src="img/myth1.jpg" alt="Myth 1">
         <h3>Myth: Periods are dirty</h3>
-        <p><strong>Fact:</strong> Menstruation is a natural biological process, not unhygienic or dirty.</p>
+        <p><strong>Fact:</strong> Menstruation is a natural biological process, not unhygienic or dirty. <a href="#" class="know-more" data-modal="myth1Modal">know scientifically</a></p>
       </div>
 
-      <div class="myth-fact-card">
-        <img src="myth2.png" alt="Myth 2">
+      <div class="myth-card">
+        <img src="img/myth2.jpg" alt="Myth 2">
         <h3>Myth: You can't exercise during periods</h3>
-        <p><strong>Fact:</strong> Light exercise can actually relieve cramps and improve mood!</p>
+        <p><strong>Fact:</strong> Light exercise can actually relieve cramps and improve mood! <a href="#" class="know-more" data-modal="myth2Modal">know scientifically</a></p>
       </div>
 
-      <div class="myth-fact-card">
-        <img src="myth3.png" alt="Myth 3">
+      <div class="myth-card">
+        <img src="img/myth3.jpg" alt="Myth 3">
         <h3>Myth: Irregular periods mean infertility</h3>
-        <p><strong>Fact:</strong> Irregular periods can have many causes and don’t always mean infertility.</p>
+        <p><strong>Fact:</strong> Irregular periods can have many causes and don't always mean infertility. <a href="#" class="know-more" data-modal="myth3Modal">know scientifically</a></p>
       </div>
 
     </div>
   </section>
+
+  <!-- Modals for Scientific Information -->
+  <div id="myth1Modal" class="modal">
+    <div class="modal-content">
+      <h3>Scientific Facts About Menstruation</h3>
+      <p>Menstruation is a natural physiological process that involves the shedding of the uterine lining. The menstrual fluid contains:</p>
+      <ul>
+        <li>Fresh blood (50-75%)</li>
+        <li>Cervical and vaginal secretions</li>
+        <li>Endometrial tissue</li>
+      </ul>
+      <p>The pH level of menstrual blood is between 6.5-8.0, which is not conducive to bacterial growth. The body has natural mechanisms to maintain hygiene during menstruation.</p><br>
+      <button class="close-modal">Close</button>
+    </div>
+  </div>
+
+  <div id="myth2Modal" class="modal">
+    <div class="modal-content">
+      <h3>Exercise During Menstruation: The Science</h3>
+      <p>Scientific research shows that exercise during menstruation can:</p>
+      <ul>
+        <li>Release endorphins that act as natural painkillers</li>
+        <li>Improve blood circulation, reducing cramping</li>
+        <li>Help reduce prostaglandins, hormones responsible for period pain</li>
+        <li>Boost serotonin levels, improving mood</li>
+      </ul>
+      <p>Studies indicate that moderate exercise can reduce PMS symptoms by up to 30%.</p><br>
+      <button class="close-modal">Close</button>
+    </div>
+  </div>
+
+  <div id="myth3Modal" class="modal">
+    <div class="modal-content">
+      <h3>Understanding Irregular Periods</h3>
+      <p>Scientific research shows that irregular periods can be caused by various factors:</p>
+      <ul>
+        <li>Hormonal imbalances</li>
+        <li>Stress and lifestyle factors</li>
+        <li>Thyroid disorders</li>
+        <li>Polycystic Ovary Syndrome (PCOS)</li>
+      </ul>
+      <p>Many of these conditions are treatable, and having irregular periods doesn't automatically indicate fertility issues.</p><br>
+      <button class="close-modal">Close</button>
+    </div>
+  </div>
+
+  <script>
+    // JavaScript for modal functionality
+    document.addEventListener('DOMContentLoaded', function() {
+      const knowMoreLinks = document.querySelectorAll('.know-more');
+      const modals = document.querySelectorAll('.modal');
+      const closeButtons = document.querySelectorAll('.close-modal');
+
+      knowMoreLinks.forEach(link => {
+        link.addEventListener('click', function(e) {
+          e.preventDefault();
+          const modalId = this.getAttribute('data-modal');
+          document.getElementById(modalId).style.display = 'flex';
+        });
+      });
+
+      closeButtons.forEach(button => {
+        button.addEventListener('click', function() {
+          this.closest('.modal').style.display = 'none';
+        });
+      });
+
+      window.addEventListener('click', function(e) {
+        modals.forEach(modal => {
+          if (e.target === modal) {
+            modal.style.display = 'none';
+          }
+        });
+      });
+    });
+  </script>
 </body>
 </html>
